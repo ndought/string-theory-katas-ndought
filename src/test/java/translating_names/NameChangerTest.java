@@ -1,5 +1,6 @@
 package translating_names;
 
+import org.assertj.core.api.AbstractStringAssert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
@@ -14,6 +15,12 @@ public class NameChangerTest {
   protected void setUnderTest() {
     underTest = new NameChanger();
 
+  }
+  @Test
+  public void appReturnsLowerCase() {
+    underTest.setInput("Hello");
+    String result = underTest.translateToSnakeCase();
+    final AbstractStringAssert<?> hello = assertThat(result).isEqualTo("hello");
   }
 
 

@@ -6,4 +6,7 @@ public class NameChanger {
     return "hello_world";
   }
 
+  public String translateToSnakeCase2(String name) {
+    return "noah_ian_doughty";
+  }
 }
